@@ -2,6 +2,8 @@
 
 This is a custom tool for copy and pasting tiles from multiple tilemaps all at once. Eventhough using multiple tilemaps as layers is a common practice, there did not seem to be any way to copy tiles from all of the tilemap layers at once. You have to do it one layer at a time. So I made this custom tool. It was made in Unity 2022.3.
 
+To get this tool, just drop a copy of the `TilemapCopyPasteTool.cs` file in your Unity project with your other scripts.
+
 When you select one or more game objects that have Tilemap components, the multilayer tile copy and paste tool will apear in your tool bar.
 1. Click the tool
 2. Make your selection
