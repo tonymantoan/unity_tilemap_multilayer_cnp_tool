@@ -10,6 +10,8 @@ When you select one or more game objects that have Tilemap components, the multi
 5. click anywhere to paste the tiles
 6. Pasted tiles will be on the same tilemap layer they were copied from.
 
+Undo/redo is also supported.
+
 Here is a demo of how it works.
 
 ![multi_layer_tilemap_cnp_tool_demo](https://github.com/user-attachments/assets/71030cb7-c89c-4e2c-b062-2dabb79d590c)
