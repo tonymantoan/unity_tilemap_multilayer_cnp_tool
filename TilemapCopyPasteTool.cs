@@ -18,7 +18,7 @@ public class TilemapCopyPasteTool : EditorTool
     public override void OnActivated()
     {
         SceneView.lastActiveSceneView.ShowNotification(new GUIContent("Entering Tile Layer Copy Select Mode"), .2f);
-        copiedTiles.Clear();
+        // copiedTiles.Clear();
         pasting = false;
     }
 
@@ -65,12 +65,15 @@ public class TilemapCopyPasteTool : EditorTool
     private void SetupToolMenu()
     {
         Handles.BeginGUI();
-        using (new GUILayout.HorizontalScope())
+        using (new GUILayout.HorizontalScope(EditorStyles.toolbar))
         {
-            using (new GUILayout.VerticalScope(EditorStyles.toolbar))
+            pasting = EditorGUILayout.Toggle("Paste Tiles", pasting);
+            // TODO: add snapToGrid option
+
+            if ( GUILayout.Button("Clear Selection") )
             {
-                pasting = EditorGUILayout.Toggle("Paste Tiles", pasting);
-                // TODO: add snapToGrid option
+                copiedTiles.Clear();
+                selectionFrameSize = new Vector3( 0, 0, 0 );
             }
 
             GUILayout.FlexibleSpace();
